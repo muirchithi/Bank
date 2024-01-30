@@ -1,4 +1,4 @@
 package com.bank.account;
 
-public class account {
+public class Transaction {
 }

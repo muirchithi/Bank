@@ -1,11 +1,8 @@
 package com.bank.customer;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.time.LocalDate;
-import java.util.Locale;
 
-public class customer {
+public class Customer {
     // person related information
     private String firstName;
     private String lastName;
