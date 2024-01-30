@@ -1,6 +1,7 @@
 package com.bank.account;
 
 import com.bank.customer.Customer;
+import com.bank.transaction.Transaction;
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;
