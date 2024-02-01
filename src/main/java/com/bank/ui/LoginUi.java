@@ -24,7 +24,7 @@ public class LoginUi extends Application {
 
     @Override
     public void start(Stage primaryStage){
-        primaryStage.setTitle(" Test Welcome");
+        primaryStage.setTitle("/Login");
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
@@ -32,8 +32,8 @@ public class LoginUi extends Application {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Text scenetitle = new Text("Welcome test ");
-        grid.add(scenetitle, 0, 0, 2, 1);
+        Text sceneTitle = new Text("Login ");
+        grid.add(sceneTitle, 0, 0, 2, 1);
 
         Label username = new Label("Username: ");
         grid.add(username, 0, 1);
@@ -47,21 +47,26 @@ public class LoginUi extends Application {
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox,1,2);
 
-        Button btn = new Button("Sign in");
+        Button btnSignIn = new Button("Sign in");
+        Button btnSignUp =  new Button("Sign up");
+
         HBox hbBtn = new HBox(10);
 
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().add(btn);
+        hbBtn.getChildren().addAll(btnSignIn, btnSignUp);
         grid.add(hbBtn,1,4);
 
-        final Text actiontarget = new Text();
-        grid.add(actiontarget,1,6);
+
+
+        final Text actionTarget = new Text();
+        grid.add(actionTarget,1,6);
          // handle login
-        btn.setOnAction(e ->{
+        btnSignIn.setOnAction(e ->{
 
         });
 
-        Scene scene = new Scene(grid,300,275);
+        btnSignUp.setOnAction(e ->{});
+        Scene scene = new Scene(grid,400,300);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
