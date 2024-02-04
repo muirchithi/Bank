@@ -24,7 +24,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.function.Consumer;
 
-public class AccountCreation extends Application{
+public class AccountCreationIU extends Application{
 
     //Field definitions
     private final Customer customer = new Customer();
@@ -36,12 +36,12 @@ public class AccountCreation extends Application{
     private TextField inputPhoneNumber;
     private Text actionTarget;
 
-    private BooleanProperty firstNameValid = new SimpleBooleanProperty(false);
-    private BooleanProperty lastNameValid = new SimpleBooleanProperty(false);
-    private BooleanProperty dateOfBirthValid = new SimpleBooleanProperty(false);
-    private BooleanProperty addressValid = new SimpleBooleanProperty(false);
-    private BooleanProperty emailValid = new SimpleBooleanProperty(false);
-    private BooleanProperty phoneNumberValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty firstNameValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty lastNameValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty dateOfBirthValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty addressValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty emailValid = new SimpleBooleanProperty(false);
+    private final BooleanProperty phoneNumberValid = new SimpleBooleanProperty(false);
 
     //Overrides
     @Override
@@ -121,7 +121,7 @@ public class AccountCreation extends Application{
 
         signUpButton.setOnAction(e -> handleSignUp());
         grid.add(signUpButton, 2,7);
-        final Text actionTarget = new Text();
+        actionTarget = new Text();
         grid.add(actionTarget,1,6);
 
 
