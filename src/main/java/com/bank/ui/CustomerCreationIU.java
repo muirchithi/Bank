@@ -3,8 +3,8 @@ package com.bank.ui;
 
 //imports
 
-import com.bank.MyApplication;
-import com.bank.customer.Customer;
+import com.bank.BankApplication;
+import com.bank.entity.CustomerServiceImpl;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
@@ -24,10 +24,10 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.function.Consumer;
 
-public class AccountCreationIU extends Application{
+public class CustomerCreationIU extends Application{
 
     //Field definitions
-    private final Customer customer = new Customer();
+    private final CustomerServiceImpl customer = new CustomerServiceImpl();
     private TextField inputFirstName;
     private TextField inputLastName;
     private TextField inputDateOfBirth;
@@ -47,7 +47,7 @@ public class AccountCreationIU extends Application{
     @Override
     public void init() throws Exception{
         super.init();
-        MyApplication.initSpring();
+        BankApplication.initSpring();
     }
 
     @Override

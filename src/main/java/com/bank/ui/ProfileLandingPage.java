@@ -3,8 +3,8 @@ package com.bank.ui;
 
 //imports
 
-import com.bank.MyApplication;
-import com.bank.customer.Customer;
+import com.bank.BankApplication;
+import com.bank.entity.CustomerServiceImpl;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -15,13 +15,13 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ProfileLandingPage extends Application {
-    private Customer customer;
+    private CustomerServiceImpl customer;
     private Text actionTarget;
 
     @Override
     public void init() throws Exception{
         super.init();
-        MyApplication.initSpring();
+        BankApplication.initSpring();
     }
 
     @Override

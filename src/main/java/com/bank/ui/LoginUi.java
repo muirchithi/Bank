@@ -1,6 +1,6 @@
 package com.bank.ui;
 
-import com.bank.MyApplication;
+import com.bank.BankApplication;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -19,7 +19,7 @@ public class LoginUi extends Application {
     @Override
     public void init() throws Exception{
         super.init();
-        MyApplication.initSpring();
+        BankApplication.initSpring();
     }
 
     @Override
