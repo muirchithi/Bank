@@ -19,7 +19,7 @@ public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int transactionId;
+    public long transactionId;
 
     private int senderAccountNumber;
     private int receiverAccountNumber;
