@@ -27,10 +27,10 @@ public class Account {
     private Boolean accountRestricted;
 
     @ManyToOne
-    @JoinColumn(name="customerNumber", referencedColumnName = "customerNumber")
+    @JoinColumn(name="customerNumber")
+    private Customer customer;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
-
     private List<Transaction> transactions = new ArrayList<>();
 
 

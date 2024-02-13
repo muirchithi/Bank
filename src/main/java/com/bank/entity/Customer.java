@@ -1,10 +1,9 @@
 package com.bank.entity;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,8 +27,8 @@ public class Customer {
     private boolean restricted = false;
     private boolean frozen = false;
 
-    @OneToMany
-    @JoinColumn(name = customerNumber, referencedColumnName = customerNumber)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Account> acounts = new ArrayList<>();
 
 }
 
