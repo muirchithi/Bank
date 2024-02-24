@@ -1,8 +1,8 @@
-package com.bank.ui;
+package com.bank.ui.view;
 
 import com.bank.BankApplication;
 import com.bank.entity.Account;
-import com.bank.entity.CustomerServiceImpl;
+import com.bank.entity.Customer;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,29 +10,41 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class CustomerAccountOverviewLandingPage extends Application {
-    private CustomerServiceImpl customer;
-    private Account accounts;
+public class CustomerTransactionsLandingPage extends Application {
+    private Customer customer;
+    private Account transactionSender;
+    private Account transactionReceiver;
+    private Account SenderTransactionHistory;
+
+
     @Override
     public void init() throws Exception{
         super.init();
-        BankApplication.initSpring();
     }
 
     @Override
     public void start(Stage primaryStage){
 
-        primaryStage.setTitle("Account Overview");
+        primaryStage.setTitle("/Customer-Transactions");
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
-        grid.setVgap(10);
         grid.setHgap(10);
-        grid.setPadding(new Insets(25, 25, 25,25));
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25,25,25,25));
 
 
 
-        Scene scene = new Scene(grid, 400, 300);
+
+
+
+
+
+
+
+
+        Scene scene = new Scene(grid,300,400);
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 }

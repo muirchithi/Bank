@@ -1,33 +1,31 @@
 package com.bank.ui;
 
+import com.bank.ui.view.LoginUi;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import com.bank.BankApplication;
 import javafx.stage.Stage;
 
 public class JavaFXApplication extends Application {
 
+    private static String[] savedArgs;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void init() throws Exception{
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(BankApplication.class);
+        builder.headless(false);
+        builder.run(savedArgs);
+    }
 
-        StackPane root = new StackPane();
-
-        Button btn = new Button("click me");
-
-        root.getChildren().add(btn);
-
-        Scene scene = new Scene(root, 900, 650);
-
-        primaryStage.setScene(scene);
-
-        primaryStage.setTitle("My App");
-
-        primaryStage.show();
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        LoginUi loginUi = new LoginUi();
+        loginUi.start(primaryStage);
     }
 
     public static void main(String[] args){
+        savedArgs = args;
         launch(args);
     }
+
 }

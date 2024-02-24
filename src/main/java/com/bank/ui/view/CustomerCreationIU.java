@@ -1,10 +1,9 @@
 //packages
-package com.bank.ui;
+package com.bank.ui.view;
 
 //imports
 
-import com.bank.BankApplication;
-import com.bank.entity.CustomerServiceImpl;
+import com.bank.entity.Customer;
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
@@ -19,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -27,7 +27,7 @@ import java.util.function.Consumer;
 public class CustomerCreationIU extends Application{
 
     //Field definitions
-    private final CustomerServiceImpl customer = new CustomerServiceImpl();
+    private final Customer customer = new Customer();
     private TextField inputFirstName;
     private TextField inputLastName;
     private TextField inputDateOfBirth;
@@ -47,7 +47,6 @@ public class CustomerCreationIU extends Application{
     @Override
     public void init() throws Exception{
         super.init();
-        BankApplication.initSpring();
     }
 
     @Override
