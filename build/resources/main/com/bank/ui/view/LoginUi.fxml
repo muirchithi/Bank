@@ -17,10 +17,10 @@
     <Text text="Login" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
 
     <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <TextField fx:id="usernameInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
     <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordInput" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
     <Button text="Sign In" GridPane.columnIndex="2" GridPane.rowIndex="3" fx:id="signInButton" onAction="#routeToCustomerAccountOverview"/>
     <Button text="Sign Up" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="signUpButton" onAction="#routeToSignUpPage"/>

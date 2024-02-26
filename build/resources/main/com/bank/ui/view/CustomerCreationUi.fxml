@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.bank.ui.controller.CustomerCreationController"
+          alignment="CENTER" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.bank.ui.view.CustomerCreationUi"
-            prefHeight="400.0" prefWidth="600.0">
+    <Text text ="Sign-Up" GridPane.ColumnIndex="0" GridPane.rowIndex="0"/>
 
-</AnchorPane>
+    <Label text="First name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="firstNameInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label fx:id="firstNameError" text="Not valid" GridPane.columnIndex="2" GridPane.rowIndex="1" visible="false"/>
+
+    <Label text="Last name:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="lastNameInput" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label fx:id="lastNameError" text="Not valid" GridPane.columnIndex="2" visible="false"/>
+
+    <Label text="Date of birth:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="dateOfBirthInput" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label fx:id="dateOfBirthError" GridPane.columnIndex="2" GridPane.rowIndex="3" visible="false"/>
+
+    <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="addressInput" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label fx:id="addressError" GridPane.columnIndex="2" GridPane.rowIndex="4" visible="false"/>
+
+    <Label text="E-Mail:" GridPane.ColumnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="emailInput" GridPane.ColumnIndex="1" GridPane.rowIndex="5"/>
+    <Label fx:id="emailError" GridPane.columnIndex="2" GridPane.rowIndex="5" visible="false"/>
+
+    <Label text="Phone number:" GridPane.ColumnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="phoneNumberInput" GridPane.ColumnIndex="1" GridPane.rowIndex="6"/>
+    <Label fx:id="phoneNumberError" GridPane.columnIndex="2" GridPane.rowIndex="6" visible="false"/>
+    
+
+
+
+</GridPane>

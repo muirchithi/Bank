@@ -14,20 +14,37 @@ import org.springframework.beans.factory.support.ScopeNotActiveException;
 public class CustomerCreationController {
 
     @FXML
-    private TextField firstName;
+    private TextField firstNameInput;
     @FXML
-    private TextField lastname;
+    private TextField lastnameInput;
     @FXML
-    private TextField dateOfBirth;
+    private TextField dateOfBirthInput;
     @FXML
-    private TextField address;
+    private TextField addressInput;
     @FXML
-    private TextField email;
+    private TextField emailInput;
     @FXML
-    private TextField phoneNumber;
+    private TextField phoneNumberInput;
 
     @FXML
     public void handleInputvalidation(){
+        String firstNameText = firstNameInput.getText();
+        String lastNameText = lastnameInput.getText();
+        String dateOfBirthText = dateOfBirthInput.getText();
+        String addressText = addressInput.getText();
+        String emailText = emailInput.getText();
+        String phoneNumberText = phoneNumberInput.getText();
+
+        if(firstNameText != null && !firstNameText.trim().isEmpty()) {
+            if (firstNameText.matches("^[A-Za-z]+$")) {
+
+            } else {
+                throw new IllegalArgumentException("Invalid first name. \n The first name can only consist of roman letters.");
+            }
+        } else{
+            throw new IllegalArgumentException("First name is mandatory. Please provide a first name.");
+        }
+
     }
 
     @FXML

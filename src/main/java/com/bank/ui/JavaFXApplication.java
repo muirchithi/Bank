@@ -1,6 +1,7 @@
 package com.bank.ui;
 
 import com.bank.ui.view.LoginUi;
+import com.bank.ui.view.CustomerCreationIU;
 import javafx.application.Application;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import com.bank.BankApplication;
@@ -19,8 +20,11 @@ public class JavaFXApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        LoginUi loginUi = new LoginUi();
-        loginUi.start(primaryStage);
+        //LoginUi loginUi = new LoginUi();
+        //loginUi.start(primaryStage);
+
+        CustomerCreationIU customerUi = new CustomerCreationIU();
+        customerUi.start(primaryStage);
     }
 
     public static void main(String[] args){
