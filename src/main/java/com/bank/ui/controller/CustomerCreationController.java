@@ -47,6 +47,7 @@ public class CustomerCreationController {
 
     }
 
+    check
     @FXML
     public void routeToLogIn(ActionEvent event){
         try{
