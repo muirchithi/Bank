@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.support.ScopeNotActiveException;
 
-
 public class CustomerCreationController {
 
     @FXML
